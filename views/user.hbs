@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+  		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/321717bd5c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+        <link rel="stylesheet" href="/css/home.css">
+        <title>Job Tracker | Home</title>
+    </head>
+    <!--navigation bar-->
+    {{>header}}
+    <body>
+        <div class="container">
+            <div class="row my-2">
+                <div class="col-lg-8 order-lg-2">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item">
+                            <p>Profile</p>
+                        </li>
+                    </ul>
+                    <div class="tab-content py-4">
+                        <div id="profile">
+                            <h5 class="mb-3">User Profile</h5>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6>About</h6>
+                                    <div id="info"></div>
+                                </div>
+                                <div id="job-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        $.get('/get-job-list', {}, function(result) {
+            let res = '';
+            result.forEach(data => {
+                res += `
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">${data.title}</h5>
+                        <p class="card-text">${data.company}</p>
+                        <p class="card-text"><small class="text-muted">${data.city}, ${data.state} ${data.country}</small></p>
+                        <p class="card-text">${data.description}</p>
+                        <p class="card-text">Skills: ${data.skill_1}, ${data.skill_2}, ${data.skill_3}, ${data.skill_4}, ${data.skill_5}</p>
+                        <form action="apply" method="POST">
+					        <input type="hidden" name="userid" value="${data.userid}">
+                            <input type="hidden" name="userid" value="${data.jobid}">                
+                            <button type="button" class="btn btn-success disabled">Applied!</button>
+                        </form>
+                    </div>
+                </div>
+                ` 
+            })
+            $('#job-list').html(res)
+        });
+
+        $.get('/info', {}, function(result) {
+            console.log(result);
+            let res = '';
+            res += `
+                <p>${result.firstname} ${result.lastname}</p>
+            ` 
+            $('#info').html(res)
+        });
+    </script>
+</html>

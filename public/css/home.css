@@ -1,0 +1,145 @@
+@import url('nav.css');
+@import url('main.css');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+
+}
+
+.card-deck {
+    margin: auto;
+    padding-top: 20px;
+}
+
+/* Styling for search bar */
+.search{
+    /*background: url(background.jpg);*/
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.search h1{
+    text-align: center;
+    padding-bottom: 10px;
+    color:slategray;
+}
+
+.search-form{
+    text-align: center;
+}
+
+.search-text{
+    border-radius: 25px;
+    height: 50px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 600px;
+}
+
+.searchBtn{
+    border-radius: 25px;
+    height: 50px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 100px;
+}
+
+
+/* Styling for contacts form */
+.contacts h3 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(74, 189, 189);
+    display: block;
+    color: white;
+}
+
+
+.contacts-form {
+    padding-top: 10px;
+    max-width: 450px;
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.contacts-text {
+    display: block;
+    width: 95%;
+    margin: 5px;
+    overflow: auto;
+    text-align: center;
+}
+
+
+/* Styling for contacts table */
+.contacts table{
+    border-collapse:collapse;
+} 
+
+.contacts thead th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.contacts tbody tr{
+    width: 150px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.contacts tbody td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.contacts tbody tr:nth-of-type(even) {
+    background-color:lightgrey;
+}
+.contacts tbody tr:nth-of-type(odd) {
+    background-color:white;
+}
+
+.list ul:nth-child(odd) {
+    background-color:#ddd;
+  }
+  
+  .list ul:nth-child(even) {
+    background-color:#fff;
+  }
+  
+  /* big */
+  @media screen and (min-width:600px) {
+    
+    .list {
+      display:table;
+      margin:1em;
+      max-width: 960px;
+      margin: 10px auto;  
+    }
+   
+    .list ul {
+      display:table-row;
+    }
+    
+    .list ul:first-child li {
+      background-color:#444;
+      color:#fff;
+    }
+    
+    .list ul > li {
+      display:table-cell;
+      padding:.5em 1em;
+    }
+    
+  }
+  

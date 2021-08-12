@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="../css/create.css">
+        <script src="https://kit.fontawesome.com/321717bd5c.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <title>Job Tracker | Post A Job</title>
+    </head>
+    
+    <body>
+        {{>header}}
+		<form class="form-signin" action="/create" method="POST">
+			<h1 class="h3 mb-3 font-weight-normal">Create A Job Posting</h1>
+
+			<label for="title" class="sr-only">Role</label>
+			<input type="textbox" name="title" id="title" class="form-control" placeholder="Role" required="" autofocus="">
+
+			<label for="company" class="sr-only">Company Name</label>
+			<input type="textbox" name="company" id="company" class="form-control" placeholder="Company Name" required="">
+
+			<label for="city" class="sr-only">City</label>
+			<input type="textbox" name="city" id="city" class="form-control" placeholder="City" required="">
+
+			<label for="state" class="sr-only">State</label>
+			<input type="textbox" name="state" id="state" class="form-control" placeholder="State" required="">
+
+			<label for="country" class="sr-only">Country</label>
+			<input type="textbox" name="country" id="country" class="form-control" placeholder="Country" required="">
+	
+			<label for="description" class="sr-only">Description</label>
+			<input type="textbox" name="description" id="description" class="form-control" placeholder="Description" required="">
+
+			<label for="skill_1" class="sr-only">Skill 1</label>
+			<input type="textbox" name="skill_1" id="description" class="form-control" placeholder="Skill 1" required="">
+
+			<label for="skill_2" class="sr-only">Skill 2</label>
+			<input type="textbox" name="skill_2" id="skill_2" class="form-control" placeholder="Skill 2" required="">
+
+			<label for="skill_3" class="sr-only">Skill 3</label>
+			<input type="textbox" name="skill_3" id="skill_3" class="form-control" placeholder="Skill 3">
+
+			<label for="skill_4" class="sr-only">Skill 4</label>
+			<input type="textbox" name="skill_4" id="skill_4" class="form-control" placeholder="Skill 4">
+
+			<label for="skill_5" class="sr-only">Skill 5</label>
+			<input type="textbox" name="skill_5" id="skill_5" class="form-control" placeholder="Skill 5">
+
+			
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Post</button>
+		</form>	
+        <script type="text/javascript" src="../app.js"></script>
+    </body>
+</html>

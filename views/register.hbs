@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Job Tracker | Log In</title>
+  		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/register.css">
+	</head>
+	{{>header}}
+	<body>
+		<div class="container text-center">
+			<div class="login-form">
+				{{#if message}}
+					<div class="error">
+						<span>{{message}}</span>
+					</div>
+				{{/if}}
+				<form class="form-signin" action="/register" method="POST">
+					<img class="mb-4" src="/images/logo.png" alt="" width="100" height="100">
+					<h1 class="h3 mb-3 font-weight-normal">Register</h1>
+					<label for="email" class="sr-only">Email address</label>
+					<input type="email" name="email" id="email" class="form-control" placeholder="Email address" required="" autofocus="">
+					<label for="password" class="sr-only">Password</label>
+					<input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
+					<label for="firstname" class="sr-only">First Name</label>
+					<input type="name" name="firstname" id="firstname" class="form-control" placeholder="First Name" required="">
+					<label for="lastname" class="sr-only">First Name</label>
+					<input type="name" name="lastname" id="lastname" class="form-control" placeholder="Last Name" required="">
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>
+				</form>	
+			</div>
+		</div>
+		<script type="text/javascript" src="../app.js"></script>
+	</body>
+</html>

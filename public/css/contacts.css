@@ -1,0 +1,122 @@
+@import url('nav.css');
+@import url('main.css');
+body {
+    height: 100%;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #88BDBC !important;
+}
+
+/* Styling for search bar */
+.search{
+    /*background: url(background.jpg);*/
+    background-size: cover;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+.search h1{
+    text-align: center;
+    padding-bottom: 10px;
+    color:slategray;
+}
+
+.search-form{
+    text-align: center;
+}
+
+.search-text{
+    border-radius: 25px;
+    height: 50px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 600px;
+}
+
+.searchBtn{
+    border-radius: 25px;
+    height: 50px;
+    border: 2px solid black;
+    padding: 10px;
+    width: 100px;
+}
+
+/* styling for view btn*/
+.viewBtn {
+    text-align: center;
+    text-decoration: none;
+}
+
+
+/* Styling for contacts form */
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+.form-signin .checkbox {
+    font-weight: 400;
+}
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+.form-signin input[type="fname"] {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.form-signin input[type="lname"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.form-signin input[type="info"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.form-signin input[type="email"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.form-signin input[type="phoneNumber"] {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+/* Styling for contacts table */
+.contacts table{
+    border-collapse:collapse;
+} 
+
+.contacts thead th{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 300px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+.contacts tbody tr{
+    width: 150px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.contacts tbody td{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.contacts tbody tr:nth-of-type(even) {
+    background-color:lightgrey;
+}
+.contacts tbody tr:nth-of-type(odd) {
+    background-color:white;
+}
+
+

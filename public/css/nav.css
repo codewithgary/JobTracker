@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,300&display=swap');
+
+.site-header {
+    background-color: #17252A;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+    color: #def2f1;
+    transition: ease-in-out color .15s;
+    font-weight: 400;
+    font-family: 'Roboto' sans-serif;
+}
+.site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}

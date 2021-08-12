@@ -1,0 +1,84 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/321717bd5c.js" crossorigin="anonymous"></script>
+    <title>Applications</title>
+</head>
+
+<body>
+
+    <!--navigation bar-->
+
+    {{>menu}}
+
+
+    <div class="applications">
+
+        <h3>Add an Application</h3>
+
+        <form class="application-form" action="/applications" method="post">
+
+            <input type="text" class="job-text" name="jobtitle" placeholder="Job Title:">
+            <br>
+            <input type="text" class="company-text" name="company" placeholder="Company:">
+            <br>
+            <input type="text" class="location-text" name="location" placeholder="Location:">
+            <br>
+            <input type="text" class="date-text" name="date" placeholder="Date Applied:">
+            <br>
+            <input type="text" class="response-text" name="response" placeholder="Response:">
+            <br>
+            <input type="text" class="outcome-text" name="outcome" placeholder="Outcome:">
+            <br>
+            <input type="submit" class="addBtn" value="Add">
+        </form>
+
+        <br>
+
+        <button class="searchBtn"><a href="search.html">Search Application</a></button>
+
+        <h3>Applications</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>App ID</th>
+                    <th>Job Title</th>
+                    <th>Company</th>
+                    <th>Location</th>
+                    <th>Date Applied</th>
+                    <th>Response</th>
+                    <th>Outcome</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each applications}}
+                <tr>
+                    <td>{{appID}}</td>
+                    <td>{{company}}</td>
+                    <td>{{location}}</td>
+                    <td>{{appDate}}</td>
+                    <td>{{response}}</td>
+                    <td>{{outcome}}</td>
+                    <td><button class="editBtn" type="button">Edit</button></td>
+                    <td><button class="deleteBtn" onclick="deleteRow(this)">Delete</button></td>
+                </tr>
+        
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        function deleteRow(delBtn) {
+            var row = delBtn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
+
+    </script>
+
+</body>
+
+</html>
